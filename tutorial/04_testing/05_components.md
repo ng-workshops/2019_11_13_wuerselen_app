@@ -139,8 +139,6 @@ describe('CustomerListComponent', () => {
 
       const expected = loadCustomers();
       expect(store.dispatch).toHaveBeenCalledWith(expected);
-
-      store.dispatch(loadCustomersSuccess({ customers: customerMockData }));
     });
 
     it('should load all customers after init', () => {
