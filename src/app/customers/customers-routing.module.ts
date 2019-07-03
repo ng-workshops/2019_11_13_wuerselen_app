@@ -5,14 +5,20 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerExistsGuard } from './guards/customer-exists.guard';
 
 const routes: Routes = [
-  { path: 'customers', component: CustomerListComponent },
+  {
+    path: 'customers',
+    component: CustomerListComponent,
+    data: { animation: 'customers' }
+  },
   {
     path: 'customers/new',
-    component: CustomerFormComponent
+    component: CustomerFormComponent,
+    data: { animation: 'customer' }
   },
   {
     path: 'customers/:id',
     component: CustomerFormComponent,
+    data: { animation: 'customer' },
     canActivate: [CustomerExistsGuard]
   }
 ];

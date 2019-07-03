@@ -9,7 +9,7 @@
 </nav>
 
 <div class="{{ currentTheme }}" [@fadeInAnimation]="getRouteAnimation(route)">
-  <router-outlet #route></router-outlet>
+  <router-outlet #route="outlet"></router-outlet>
 </div>
 
 <div class="theme">Theme: {{ currentTheme }}</div>

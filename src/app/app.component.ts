@@ -4,8 +4,9 @@ import {
   OnInit,
   ViewContainerRef
 } from '@angular/core';
-import { SettingsService } from './settings/settings.service';
+import { RouterOutlet } from '@angular/router';
 import { fadeInAnimation } from './core/animations/fade-in-animation';
+import { SettingsService } from './settings/settings.service';
 import { HostElementService } from './shared/modal/host/host-element.service';
 
 @Component({
@@ -34,8 +35,11 @@ export class AppComponent implements OnInit {
   }
 
   // change the animation state
-  getRouteAnimation(outlet: any) {
-    return '';
-    // return new Date().toString();
+  getRouteAnimation(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animation']
+    );
   }
 }
