@@ -17,7 +17,7 @@
     }}</mat-icon>
   </button>
 </div>
-<div class="details" *ngIf="showDetails">
+<div @toggle class="details" *ngIf="showDetails">
   <ng-content></ng-content>
 </div>
 <div class="footer">

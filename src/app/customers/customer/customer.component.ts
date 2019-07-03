@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -14,6 +15,15 @@ import { Customer } from '../customer.model';
   selector: 'app-customer',
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.scss'],
+  animations: [
+    trigger('toggle', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('2s', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [animate('1s', style({ opacity: 0 }))])
+    ])
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomerComponent implements OnInit {
