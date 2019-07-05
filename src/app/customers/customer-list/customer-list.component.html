@@ -16,7 +16,7 @@
 
 <div class="customer">
   <app-customer
-    *ngFor="let customer of customers$ | async"
+    *ngFor="let customer of customers$ | async; trackBy: trackByFn"
     [customer]="customer"
     (deleteCustomer)="deleteCustomer($event)"
   >

@@ -61,4 +61,8 @@ export class CustomerListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next();
   }
+
+  trackByFn(idx, item) {
+    return item.id;
+  }
 }

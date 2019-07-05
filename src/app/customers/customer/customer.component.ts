@@ -1,4 +1,10 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  keyframes,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -18,8 +24,14 @@ import { Customer } from '../customer.model';
   animations: [
     trigger('toggle', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('2s', style({ opacity: 1 }))
+        animate(
+          '2s',
+          keyframes([
+            style({ backgroundColor: 'blue', offset: 0 }),
+            style({ backgroundColor: 'red', offset: 0.8 }),
+            style({ backgroundColor: 'orange', offset: 1.0 })
+          ])
+        )
       ]),
       transition(':leave', [animate('1s', style({ opacity: 0 }))])
     ])

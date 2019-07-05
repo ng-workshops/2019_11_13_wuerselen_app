@@ -43,9 +43,9 @@ Dokumentation of the all the Angular CLI commands and addional information of co
 
 Offical code styleguide from the Angular team.
 
-https://angular.io/guide/styleguide
-https://angular-checklist.io/projects
-[Angular Update Guide](https://update.angular.io)
+- https://angular.io/guide/styleguide
+- https://angular-checklist.io/projects
+- [Angular Update Guide](https://update.angular.io)
 
 ### Create you own Angular lib
 
@@ -65,6 +65,8 @@ One of the best Editors to work with JavaScript/TypeScript and Angular apps. Has
 
 - [VS Code](https://code.visualstudio.com)
 - [Plugin Pack for Angular](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)
+- [Jest Plugin](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+- [Karma Plugin](https://marketplace.visualstudio.com/items?itemName=raagh.angular-karma-test-explorer)
 
 ### Prettier
 
@@ -79,8 +81,8 @@ Opinionated code styling tool. Works for many languages and will help you to no 
 
 Blog article how you can use the [Jest](https://facebook.github.io/jest/) testing framework with Angular. Replaces the karma runner and is much faster. Also includes some nice features like [Snapshot Testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
 
-https://www.xfive.co/blog/testing-angular-faster-jest/
-https://github.com/briebug/jest-schematic Schematic that adds all the code necessary for jest and removes karma from the project
+- https://www.xfive.co/blog/testing-angular-faster-jest/
+- https://github.com/briebug/jest-schematic Schematic that adds all the code necessary for jest and removes karma from the project
 
 ### Nrwl Extensions for Angular
 
@@ -101,6 +103,12 @@ https://nrwl.io/nx
 - [Augury](https://augury.angular.io) Chrome Extension for debugging and profiling Angular apps
 - [ngrev](https://github.com/mgechev/ngrev) Tool will generate a graphical representation of the component structure of your Angular app
 - [Angular Console](https://angularconsole.com) The UI for the angular-cli
+
+### Styling
+
+- [Icons](https://icomoon.io/#home) Icon sets and an app to transform svg icons into a font
+- [Refactoring UI](https://refactoringui.com) Design Tips and an ebook for with guide to to refactor existing designs
+- [Animate.css](https://daneden.github.io/animate.css/) Collection of css animations
 
 ### Authentication
 
