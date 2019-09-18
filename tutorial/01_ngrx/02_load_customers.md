@@ -81,7 +81,7 @@ export class CustomerListComponent implements OnInit {
   loading$: Observable<boolean> = this.store.select(getLoading);
 
   ngOnInit() {
-    this.store.dispatch(new LoadCustomers());
+    this.store.dispatch(loadCustomers());
 
     // this.customers$ = merge(this.search$, this.reload$).pipe(
     //   withLatestFrom(this.search$),

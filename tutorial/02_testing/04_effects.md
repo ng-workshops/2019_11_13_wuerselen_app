@@ -70,7 +70,6 @@ describe('CustomerEffects', () => {
     it('THEN the LoadCustomersSuccess action should be returned with customers', done => {
       actions$ = new ReplaySubject(1);
       actions$.next(searchCustomer({ criteria: 'simpson' }));
-
       effects.loadCustomers$.subscribe(result => {
         expect(result).toEqual(
           loadCustomersSuccess({ customers: customerMockData })

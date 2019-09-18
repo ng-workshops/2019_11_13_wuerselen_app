@@ -32,11 +32,8 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production
 
 ```ts
 import { Action } from '@ngrx/store';
-import {
-  CustomerActions,
-  CustomerActionTypes
-} from '../actions/customer.actions';
 import { Customer } from '../../customer.model';
+import * as CustomerActions from '../actions/customer.actions';
 
 export interface CustomerState {
   loading: boolean;

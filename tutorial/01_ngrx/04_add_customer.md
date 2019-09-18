@@ -37,7 +37,7 @@ on(CustomerActions.addCustomerSuccess, (state, { customer }) => ({
       concatMap(({ customer }) => {
         return this.customerService.create(customer).pipe(
           map(result => CustomerActions.addCustomerSuccess({ customer: result })),
-          catchError(err => of(CustomerActions.addCustomerFail(err)))
+          catchError(err => of(CustomerActions.addCustomerFail({err})))
         );
       })
     )

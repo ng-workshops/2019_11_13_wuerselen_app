@@ -170,3 +170,64 @@ describe('CustomerListComponent', () => {
   });
 });
 ```
+
+## src/app/customers/store/effects/customer.effects.spec.ts
+
+```ts
+const customerMockData = require('../../../../../server/mocks/customers/customers.json');
+
+const CustomerServiceStub = {
+  getAll: () => of(customerMockData)
+};
+
+describe('CustomerEffects without TestBed', () => {
+  const actions$: ReplaySubject<any> = new ReplaySubject(1);
+  let effects: CustomerEffects;
+
+  beforeEach(() => {
+    effects = new CustomerEffects(
+      actions$,
+      CustomerServiceStub as CustomerService,
+      {} as any,
+      {} as any
+    );
+
+    spyOn(CustomerServiceStub, 'getAll').and.callThrough();
+  });
+
+  it('should be created', () => {
+    expect(effects).toBeTruthy();
+  });
+
+  describe('GIVEN the customers are loaded', () => {
+    describe('WHEN there is no search value', () => {
+      it('THEN the LoadCustomersSuccess action should be returned with customers', done => {
+        // actions$ = new ReplaySubject(1);
+        actions$.next(loadCustomers());
+
+        effects.loadCustomers$.subscribe(result => {
+          expect(result).toEqual(
+            loadCustomersSuccess({ customers: customerMockData })
+          );
+          expect(CustomerServiceStub.getAll).toHaveBeenCalledWith(undefined);
+          done();
+        });
+      });
+    });
+  });
+
+  describe('WHEN there is a search value', () => {
+    it('THEN the LoadCustomersSuccess action should be returned with customers', done => {
+      // actions$ = new ReplaySubject(1);
+      actions$.next(searchCustomer({ criteria: 'simpson' }));
+      effects.loadCustomers$.subscribe(result => {
+        expect(result).toEqual(
+          loadCustomersSuccess({ customers: customerMockData })
+        );
+        expect(CustomerServiceStub.getAll).toHaveBeenCalledWith('simpson');
+        done();
+      });
+    });
+  });
+});
+```

@@ -12,7 +12,7 @@ Injectable({
   providedIn: 'root'
 });
 export class HostElementService {
-  private _hostElement = new ReplaySubject<ViewContainerRef>();
+  private _hostElement = new ReplaySubject<ViewContainerRef>(1);
   hostElement$ = this._hostElement.asObservable();
 
   setHost(hostElement: ViewContainerRef): void {
