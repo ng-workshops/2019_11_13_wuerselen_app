@@ -75,6 +75,11 @@ export class CustomerEffects {
 ## src/app/customers/customer-list/customer-list.component.ts
 
 ```ts
+import {
+  getCustomers,
+  getLoading
+} from '../store/selectors/customer.selectors';
+
 export class CustomerListComponent implements OnInit {
   // set up selectors
   customers$: Observable<Customer[]> = this.store.select(getCustomers);
@@ -114,8 +119,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 ....
 
 exports: [
-...
-MatProgressBarModule,
+  ...
+  MatProgressBarModule,
+  ...
 ]
 
 ```

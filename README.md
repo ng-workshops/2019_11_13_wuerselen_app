@@ -151,3 +151,4 @@ https://nrwl.io/nx
 - [AngularConnect](https://www.youtube.com/channel/UCzrskTiT_ObAk3xBkVxMz5g/videos)
 - [ng-be](https://www.youtube.com/channel/UCnMfZM2S3QgbFvOyet5PMmQ/videos)
 - [ngVikings](https://www.youtube.com/channel/UCImlZXX470Pl8N_CUy3E2Zw/videos)
+- [ng-de](https://www.youtube.com/channel/UCBw_r4N2nv72l9IV2hn042A/videos)

@@ -15,7 +15,7 @@ export const selectCustomer = createAction(
 on(CustomerActions.selectCustomer, (state, { id }) => ({
   ...state,
   selectedCustomerId: id
-}));
+})),
 ```
 
 ## src/app/customers/store/selectors/customer.selectors.ts

@@ -67,7 +67,7 @@ export class CustomerExistsGuard implements CanActivate {
     return this.store.select(fromSelectors.getLoaded).pipe(
       tap(loaded => {
         if (!loaded) {
-          this.store.dispatch(new fromActions.LoadCustomers());
+          this.store.dispatch(fromActions.loadCustomers());
         }
       }),
       filter(loaded => loaded),

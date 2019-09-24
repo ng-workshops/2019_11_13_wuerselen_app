@@ -75,7 +75,9 @@ saveCustomersSuccess$ = createEffect(
  submit() {
     const data = this.form.getRawValue();
     this.store.dispatch(
-      data.id ? new UpdateCustomer(data) : new AddCustomer(data)
+      data.id
+        ? updateCustomer({ customer: data })
+        : addCustomer({ customer: data })
     );
   }
 ```

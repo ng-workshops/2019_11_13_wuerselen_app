@@ -6,7 +6,7 @@
 import { localStorageSync } from 'ngrx-store-localstorage';
 
 export const metaReducers: MetaReducer<AppState>[] = !environment.production
-  ? [performanceLogger, storeFreeze, localStorageSyncReducer]
+  ? [performanceLogger, localStorageSyncReducer]
   : [localStorageSyncReducer];
 
 // export because of AOT

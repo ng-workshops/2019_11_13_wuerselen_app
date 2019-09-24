@@ -16,7 +16,7 @@ on(CustomerActions.searchCustomer, (state, { criteria }) => ({
   ...state,
   loading: true,
   search: criteria
-}));
+})),
 ```
 
 ## src/app/customers/store/effects/customer.effects.ts

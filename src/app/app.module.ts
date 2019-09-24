@@ -24,7 +24,7 @@ import { CustomersModule } from './customers/customers.module';
 import { HomeModule } from './home/home.module';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
-import { effects, metaReducers, reducers } from './store';
+import { effects, metaReducers, reducers, runtimeChecks } from './store';
 
 // the second parameter 'de' is optional
 registerLocaleData(localeDe, 'de');
@@ -41,10 +41,7 @@ registerLocaleData(localeDe, 'de');
     AppRoutingModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
+      runtimeChecks
     }),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot(effects),

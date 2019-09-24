@@ -25,7 +25,7 @@ export const deleteCustomerFail = createAction(
 on(CustomerActions.deleteCustomerSuccess, (state, { id }) => ({
   ...state,
   customers: [...state.customers.filter(c => c.id !== id)]
-}));
+})),
 ```
 
 ## src/app/customers/store/effects/customer.effects.ts

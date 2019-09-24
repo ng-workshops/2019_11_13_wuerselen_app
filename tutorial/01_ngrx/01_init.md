@@ -58,7 +58,8 @@ export function reducer(state: CustomerState | undefined, action: Action) {
 }
 ```
 
-> touch customers/store/selectors/customer.selectors.ts
+> create folder "src/app/customers/store/selectors"
+> create "src/app/customers/store/selectors/customer.selectors.ts"
 
 ## src/app/customers/store/selectors/customer.selectors.ts
 
@@ -90,6 +91,8 @@ export const getCustomers = createSelector(
 ```
 
 ## src/app/app.module.ts
+
+Add EffectsModule to imports
 
 ```ts
 EffectsModule.forRoot([]),
@@ -135,3 +138,7 @@ ngOnInit() {
     this.store.dispatch(loadCustomers());
   }
 ```
+
+## Redux dev tools Chrome extension
+
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=de

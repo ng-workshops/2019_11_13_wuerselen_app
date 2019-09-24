@@ -1,4 +1,4 @@
-# 8 ngrx - Router Store
+324# 8 ngrx - Router Store
 
 ## src/app/store/index.ts
 

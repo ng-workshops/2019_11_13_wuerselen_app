@@ -1,6 +1,6 @@
 # 3 testing - selectors
 
-> touch customers/store/selectors/customer.selectors.spec.ts
+> touch src/app/customers/store/selectors/customer.selectors.spec.ts
 
 ## src/app/customers/store/selectors/customer.selectors.spec.ts
 

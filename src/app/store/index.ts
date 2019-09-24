@@ -5,7 +5,6 @@ import {
   createFeatureSelector,
   MetaReducer
 } from '@ngrx/store';
-
 import { localStorageSync } from 'ngrx-store-localstorage';
 import { environment } from '../../environments/environment';
 import { performanceLogger } from '../core/router/performance-logger';
@@ -30,6 +29,13 @@ export const getRouterState = createFeatureSelector<
 >('router');
 
 export const effects: any[] = [RouterEffects];
+
+export const runtimeChecks = {
+  strictStateImmutability: true,
+  strictActionImmutability: true,
+  strictStateSerializability: true,
+  strictActionSerializability: false // https://github.com/ngrx/platform/issues/1834
+};
 
 export function localStorageSyncReducer(
   reducer: ActionReducer<any>

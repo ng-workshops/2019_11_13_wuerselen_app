@@ -25,7 +25,7 @@ export const addCustomerFail = createAction(
 on(CustomerActions.addCustomerSuccess, (state, { customer }) => ({
   ...state,
   customers: [...state.customers, customer]
-}));
+})),
 ```
 
 ## src/app/customers/store/effects/customer.effects.ts

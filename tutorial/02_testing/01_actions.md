@@ -1,6 +1,6 @@
 # 1 testing - actions
 
-> touch customers/store/actions/customer.actions.spec.ts
+> touch src/app/customers/store/actions/customer.actions.spec.ts
 
 ## src/app/customers/store/actions/customer.actions.spec.ts
 
@@ -15,7 +15,7 @@ describe('Customer actions', () => {
       it('should create a anction', () => {
         const actual = fromCustomers.loadCustomers;
         const expected = {
-          type: '[UI] Load Customers'
+          type: '[Customer] Load Customers'
         };
 
         expect(actual.type).toEqual(expected.type);
