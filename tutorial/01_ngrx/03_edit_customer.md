@@ -37,6 +37,8 @@ export const getSelectedCustomer = createSelector(
 ## src/app/customers/customer-form/customer-form.component.ts
 
 ```ts
+import { select, Store } from '@ngrx/store';
+
 export class CustomerFormComponent implements OnInit, OnDestroy {
   form: FormGroup;
   private destroy$ = new Subject();
@@ -53,8 +55,8 @@ export class CustomerFormComponent implements OnInit, OnDestroy {
     this.form = Customer.toFormGroup();
 
     this.store
-      .select(getSelectedCustomer)
       .pipe(
+        select(getSelectedCustomer),
         filter(customer => Boolean(customer)),
         takeUntil(this.destroy$)
       )

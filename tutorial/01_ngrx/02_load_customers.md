@@ -79,11 +79,12 @@ import {
   getCustomers,
   getLoading
 } from '../store/selectors/customer.selectors';
+import { select, Store } from '@ngrx/store';
 
 export class CustomerListComponent implements OnInit {
   // set up selectors
-  customers$: Observable<Customer[]> = this.store.select(getCustomers);
-  loading$: Observable<boolean> = this.store.select(getLoading);
+  customers$: Observable<Customer[]> = this.store.pipe(select(getCustomers));
+  loading$: Observable<boolean> = this.store.pipe(select(getLoading));
 
   ngOnInit() {
     this.store.dispatch(loadCustomers());

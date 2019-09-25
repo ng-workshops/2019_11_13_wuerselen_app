@@ -33,7 +33,7 @@ export const getLoaded = createSelector(
 ```ts
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { tap, map, filter, take, switchMap } from 'rxjs/operators';
 
@@ -57,14 +57,16 @@ export class CustomerExistsGuard implements CanActivate {
   }
 
   hasCustomer(id: number): Observable<boolean> {
-    return this.store.select(fromSelectors.getCustomers).pipe(
+    return this.store.pipe(
+      select(fromSelectors.getCustomers),
       map(customers => !!customers.find(c => c.id === id)),
       take(1)
     );
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromSelectors.getLoaded).pipe(
+    return this.store.pipe(
+      select(fromSelectors.getLoaded),
       tap(loaded => {
         if (!loaded) {
           this.store.dispatch(fromActions.loadCustomers());

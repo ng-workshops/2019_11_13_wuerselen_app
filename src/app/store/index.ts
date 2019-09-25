@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 import { performanceLogger } from '../core/router/performance-logger';
 import { RouterEffects } from '../core/router/router.effects';
 import { RouterStateUrl } from '../core/router/router.serializer';
+import { customerFeatureKey } from '../customers/store/reducers/customer.reducer';
 
 // tslint:disable-next-line:no-empty-interface
 export interface AppState {
@@ -40,5 +41,5 @@ export const runtimeChecks = {
 export function localStorageSyncReducer(
   reducer: ActionReducer<any>
 ): ActionReducer<any> {
-  return localStorageSync({ keys: ['customer'] })(reducer);
+  return localStorageSync({ keys: [customerFeatureKey] })(reducer);
 }

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap, map, pluck } from 'rxjs/operators';
-import { ProductsService } from '../products.service';
-import { Product } from '../product.model';
 import { Observable, of } from 'rxjs';
+import { Product } from '../product.model';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-product-details',
@@ -29,7 +28,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   save() {
-    this.productsService.update(this.product).subscribe(_ => this.cancel());
+    this.productsService.update(this.product).subscribe(() => this.cancel());
   }
 
   cancel() {

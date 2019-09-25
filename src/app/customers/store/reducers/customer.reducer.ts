@@ -3,6 +3,8 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { Customer } from '../../customer.model';
 import * as CustomerActions from '../actions/customer.actions';
 
+export const customerFeatureKey = 'customer';
+
 export interface CustomerState extends EntityState<Customer> {
   // additional entity state properties
   loading: boolean;

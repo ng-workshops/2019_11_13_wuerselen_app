@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Settings, Theme } from './settings.model';
-import { catchError, tap } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
 import { Subject, throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { Settings, Theme } from './settings.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class SettingsService {
 
   set(settings: Settings) {
     return this.httpClient.post<Settings>(this.ENDPOINT, settings).pipe(
-      tap(_ => this.themeListener.next(settings.theme)),
+      tap(() => this.themeListener.next(settings.theme)),
       catchError(this.handleError)
     );
   }

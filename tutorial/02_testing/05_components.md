@@ -10,7 +10,7 @@ import {
   OnInit
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 import { navigate } from '../../core/router/router.actions';
@@ -34,8 +34,8 @@ import {
 })
 export class CustomerListComponent implements OnInit, OnDestroy {
   searchTerm = new FormControl();
-  customers$: Observable<Customer[]> = this.store.select(getCustomers);
-  loading$: Observable<boolean> = this.store.select(getLoading);
+  customers$: Observable<Customer[]> = this.store.pipe(select(getCustomers));
+  loading$: Observable<boolean> = this.store.pipe(select(getLoading));
 
   private destroy$ = new Subject();
 

@@ -4,6 +4,7 @@
 
 ```ts
 import { localStorageSync } from 'ngrx-store-localstorage';
+import { customerFeatureKey } from '../customers/store/reducers/customer.reducer';
 
 export const metaReducers: MetaReducer<AppState>[] = !environment.production
   ? [performanceLogger, localStorageSyncReducer]
@@ -13,6 +14,6 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production
 export function localStorageSyncReducer(
   reducer: ActionReducer<any>
 ): ActionReducer<any> {
-  return localStorageSync({ keys: ['customer'] })(reducer);
+  return localStorageSync({ keys: [customerFeatureKey] })(reducer);
 }
 ```

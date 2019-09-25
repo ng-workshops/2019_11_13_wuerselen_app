@@ -95,9 +95,9 @@ export class CustomerFormComponent implements OnInit, OnDestroy {
     this.form = Customer.toFormGroup();
 
     this.store
-      // .select(getSelectedCustomer)
-      .select(getSelectedCustomerFromRouter)
       .pipe(
+        // select(getSelectedCustomer)
+        select(getSelectedCustomerFromRouter),
         filter(customer => !!customer),
         takeUntil(this.destroy$)
       )

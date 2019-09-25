@@ -6,18 +6,21 @@ import { SharedModule } from '../shared/shared.module';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
+import { CustomerStatusPipe } from './customer-status.pipe';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomerEffects } from './store/effects/customer.effects';
 import * as fromCustomer from './store/reducers/customer.reducer';
-import { CustomerStatusPipe } from './customer-status.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     CustomersRoutingModule,
     SharedModule,
-    StoreModule.forFeature('customer', fromCustomer.reducer),
+    StoreModule.forFeature(
+      fromCustomer.customerFeatureKey,
+      fromCustomer.reducer
+    ),
     EffectsModule.forFeature([CustomerEffects])
   ],
   declarations: [

@@ -5,7 +5,7 @@ import {
   OnInit
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { navigate } from '../../core/router/router.actions';
@@ -30,8 +30,8 @@ export class CustomerFormComponent implements OnInit, OnDestroy {
     this.form = Customer.toFormGroup();
 
     this.store
-      .select(getSelectedCustomerFromRouter)
       .pipe(
+        select(getSelectedCustomerFromRouter),
         filter(customer => Boolean(customer)),
         takeUntil(this.destroy$)
       )

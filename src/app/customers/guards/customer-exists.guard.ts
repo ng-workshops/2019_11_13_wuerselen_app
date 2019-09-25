@@ -5,7 +5,7 @@ import {
   RouterStateSnapshot,
   UrlTree
 } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { filter, map, switchMap, take, tap } from 'rxjs/operators';
 import { loadCustomers } from '../store/actions/customer.actions';
@@ -38,14 +38,16 @@ export class CustomerExistsGuard implements CanActivate {
   }
 
   hasCustomer(id: number): Observable<boolean> {
-    return this.store.select(getCustomersEntities).pipe(
+    return this.store.pipe(
+      select(getCustomersEntities),
       map(customers => Boolean(customers[id])),
       take(1)
     );
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(getLoaded).pipe(
+    return this.store.pipe(
+      select(getLoaded),
       tap(loaded => {
         if (!loaded) {
           this.store.dispatch(loadCustomers());

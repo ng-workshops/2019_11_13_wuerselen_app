@@ -35,6 +35,8 @@ import { Action } from '@ngrx/store';
 import { Customer } from '../../customer.model';
 import * as CustomerActions from '../actions/customer.actions';
 
+export const customerFeatureKey = 'customer';
+
 export interface CustomerState {
   loading: boolean;
   customers: Customer[];
@@ -65,13 +67,16 @@ export function reducer(state: CustomerState | undefined, action: Action) {
 
 ```ts
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { CustomerState } from '../reducers/customer.reducer';
+import {
+  customerFeatureKey,
+  CustomerState
+} from '../reducers/customer.reducer';
 /**
  * The createFeatureSelector function selects a piece of state from the root of the state object.
  * This is used for selecting feature states that are loaded eagerly or lazily.
  */
 export const getCustomersStore = createFeatureSelector<CustomerState>(
-  'customer'
+  customerFeatureKey
 );
 
 /**

@@ -1,6 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { getRouterState } from '../../../store';
 import {
+  customerFeatureKey,
   CustomerState,
   selectAll,
   selectEntities
@@ -10,7 +11,7 @@ import {
  * This is used for selecting feature states that are loaded eagerly or lazily.
  */
 export const getCustomersStore = createFeatureSelector<CustomerState>(
-  'customer'
+  customerFeatureKey
 );
 
 /**
