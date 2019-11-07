@@ -92,6 +92,7 @@ https://nrwl.io/nx
 
 ### Internationalization
 
+- [Transloco](https://github.com/ngneat/transloco) Feature rich internationalization (i18n) library for Angular
 - [Angular i18n](https://angular.io/guide/i18n) The build in solution for internationalization from Angular
 - [NGX-Translate](http://www.ngx-translate.com) A more dynamic approach for internationalization from the community
 - [ngx-translate-extract](https://github.com/biesbjerg/ngx-translate-extract) Extracts localizations keys from the app and saves them in json files for each language

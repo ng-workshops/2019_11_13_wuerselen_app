@@ -1,0 +1,42 @@
+<h1 i18n>Site notice</h1>
+
+<p i18n="This is the content of the impressum">
+  Here is some legal stuff and contact info.
+</p>
+
+<footer>
+  <a i18n="Sitemap|The Sitemap" i18n-title title="Much better sitemap"
+    >Sitemap</a
+  >
+  |
+  <a i18n="Link to career site@@career">Career</a>
+
+  <br />
+  <br />
+  <br />
+
+  <div>
+    <span i18n="Last update date@@lastupdated">Last updated at </span
+    ><span>{{ lastUpdatedAt | date: 'short' }}</span>
+    <p i18n>
+      That is {days, plural, =0 {just now} =1 {yesterday} other
+      {{{days | number:'1.0-0'}} days ago}}
+    </p>
+    <ng-container i18n>Copyright ACME Ltd</ng-container>
+  </div>
+
+  <ul>
+    <li i18n>
+      {'female', select, male{Proudly created by Mr } female{Proudly created by
+      Mrs } other{Our developers }} Sarah
+    </li>
+    <li i18n>
+      {'male', select, male{Proudly created by Mr } female{Proudly created by
+      Mrs } other{Our developers }} Peter
+    </li>
+    <li i18n>
+      {'', select, male{Proudly created by Mr } female{Proudly created by Mrs }
+      other{Our developers }} Sarah + Peter
+    </li>
+  </ul>
+</footer>

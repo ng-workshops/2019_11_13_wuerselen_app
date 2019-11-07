@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ead294490054eb8db06b29373e14cb8038273b8e" datatype="html">
+        <source>Site notice</source>
+        <target>Impressum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c2b81e11580e6df2ae1d03fb9cf7f8d9e61e2396" datatype="html">
+        <source>  Here is some legal stuff and contact info.</source>
+        <target>Hier finden Sie ein paar rechtliche Informationen und andere interessante Dinge</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">This is the content of the impressum</note>
+      </trans-unit>
+      <trans-unit id="47f371b1fb3cfdc812acebcd4177c335f1ed88be" datatype="html">
+        <source>Sitemap</source>
+        <target>Sitemap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">The Sitemap</note>
+        <note priority="1" from="meaning">Sitemap</note>
+      </trans-unit>
+      <trans-unit id="6b559d31b48c61f9dbeaac46d22ac1ea63109d43" datatype="html">
+        <source>Much better sitemap</source>
+        <target>Eine super Sitemap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="career" datatype="html">
+        <source>Career</source>
+        <target>Karriere</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Link to career site</note>
+      </trans-unit>
+      <trans-unit id="lastupdated" datatype="html">
+        <source>Last updated at </source>
+        <target>Zuletzt gändert am </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Last update date</note>
+      </trans-unit>
+      <trans-unit id="b749bfe499730a1a2d4bbf244a6c3b2f857d9a72" datatype="html">
+        <source>
+      That is <x id="ICU" equiv-text="{days, plural, =0 {...} =1 {...} other {...}}"/>
+    </source>
+        <target>
+      Das ist <x id="ICU" equiv-text="{days, plural, =0 {...} =1 {...} other {...}}"/>
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1c82534632f2282792d718e728a5d9e61f676ccd" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {just now} =1 {yesterday} other {<x id="INTERPOLATION" equiv-text="{{days | number:&apos;1.0-0&apos;}}"/> days ago} }</source>
+        <target>{VAR_PLURAL, plural, =0 {genau jetzt} =1 {gestern gewesen} other {<x id="INTERPOLATION" equiv-text="{{days | number:&apos;1.0-0&apos;}}"/> Tage her} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3628678b7d3d98208e857f71a236973866922af4" datatype="html">
+        <source>Copyright ACME Ltd</source>
+        <target>Copyright ACME Ltd</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fc5455373c768822bf26e92c1d6dfd643224e1b2" datatype="html">
+        <source>
+      <x id="ICU" equiv-text="{&apos;female&apos;, select, male {...} female {...} other {...}}"/> Sarah
+    </source>
+        <target>
+      <x id="ICU" equiv-text="{&apos;female&apos;, select, male {...} female {...} other {...}}"/> Sarah
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7887e8cd1ce3a650a489b7e1215a78131c0416cb" datatype="html">
+        <source>{VAR_SELECT, select, male {Proudly created by Mr } female {Proudly created by
+      Mrs } other {Our developers } }</source>
+        <target>{VAR_SELECT, select, male {Mit Liebe erstellt von Herrn } female {Mit Liebe erstellt von Frau } other {Unsere Entwickler } }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a555e24ceffe1dc362d1b9d085108ca7b3b14233" datatype="html">
+        <source>
+      <x id="ICU" equiv-text="{&apos;male&apos;, select, male {...} female {...} other {...}}"/> Peter
+    </source>
+        <target>
+      <x id="ICU" equiv-text="{&apos;male&apos;, select, male {...} female {...} other {...}}"/> Peter
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f2e8db116b75726adb60b353c4e1984005f763e4" datatype="html">
+      <source>{VAR_SELECT, select, male {Proudly created by Mr } female {Proudly created by
+      Mrs } other {Our developers } }</source>
+       <target>{VAR_SELECT, select, male {Mit Liebe erstellt von Herrn } female {Mit Liebe erstellt von Frau } other {Unsere Entwickler } }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1734289be664e7ec54f6642f66dd58d5dc7a0bb" datatype="html">
+        <source>
+      <x id="ICU" equiv-text="{&apos;&apos;, select, male {...} female {...} other {...}}"/> Sarah + Peter
+    </source>
+        <target>
+      <x id="ICU" equiv-text="{&apos;&apos;, select, male {...} female {...} other {...}}"/> Sarah + Peter
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8938691a78b62b98e2190fd60675f2949daf94a1" datatype="html">
+              <source>{VAR_SELECT, select, male {Proudly created by Mr } female {Proudly created by Mrs } other {Our developers } }</source>
+<target>{VAR_SELECT, select, male {Mit Liebe erstellt von Herrn } female {Mit Liebe erstellt von Frau } other {Unsere Entwickler } }</target>        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/impressum/impressum.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

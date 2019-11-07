@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="1547876271716599756"><source>app/home/impressum/impressum.component.html:1</source>Impressum</msg>
+  <msg id="2754928381819780616" desc="This is the content of the impressum"><source>app/home/impressum/impressum.component.html:3,5</source>
+  Here is some legal stuff and contact info.
+</msg>
+  <msg id="9004859970643422181" desc="The Sitemap" meaning="Sitemap"><source>app/home/impressum/impressum.component.html:8</source>Sitemap</msg>
+  <msg id="3080822381293835221" desc="The Sitemap" meaning="Sitemap"><source>app/home/impressum/impressum.component.html:10</source>Sitemap 2</msg>
+  <msg id="9070800277537909836"><source>app/home/impressum/impressum.component.html:9</source>Much better sitemap</msg>
+  <msg id="career" desc="Link to career site"><source>app/home/impressum/impressum.component.html:13</source>Career</msg>
+  <msg id="lastupdated" desc="Last update date"><source>app/home/impressum/impressum.component.html:20</source><source>app/home/impressum2/impressum2.component.html:26</source>Last updated at </msg>
+  <msg id="5789181343308106134"><source>app/home/impressum/impressum.component.html:22,25</source><source>app/home/impressum2/impressum2.component.html:28,31</source>
+      That is <ph name="ICU"><ex>{days, plural, =0 {...} =1 {...} other {...}}</ex>{days, plural, =0 {...} =1 {...} other {...}}</ph>
+    </msg>
+  <msg id="5580270065314732168"><source>app/home/impressum/impressum.component.html:23,24</source><source>app/home/impressum2/impressum2.component.html:29,30</source>{VAR_PLURAL, plural, =0 {just now} =1 {yesterday} other {<ph name="INTERPOLATION"><ex>{{days | number:&apos;1.0-0&apos;}}</ex>{{days | number:&apos;1.0-0&apos;}}</ph> days ago} }</msg>
+  <msg id="7751891751742925787"><source>app/home/impressum/impressum.component.html:26</source><source>app/home/impressum2/impressum2.component.html:32</source>Copyright ACME Ltd</msg>
+</messagebundle>

@@ -1,0 +1,54 @@
+<button (click)="useLanguage('en')">In english</button>
+<button (click)="useLanguage('de')">Auf Deutsch</button>
+
+<ng-container *transloco="let t; read: 'impressum'">
+  <h1>{{ t('title') }}</h1>
+</ng-container>
+
+<h3>{{ 'impressum.greeting' | transloco: { name: user.name } }}</h3>
+
+<p transloco="impressum.content"></p>
+
+<div [innerHTML]="'impressum.info' | transloco"></div>
+
+<!-- Only works when language file is already loaded -->
+<div>This is the title loaded from Code: {{ fromCode }}</div>
+<div>This is the title loaded from Code: {{ fromCode$ | async }}</div>
+
+<br />
+
+<footer>
+  <a transloco="impressum.sitemap"></a> | <a transloco="impressum.career"></a> |
+  <a transloco="impressum.home"></a>
+
+  <br />
+  <br />
+  <br />
+
+  <div>
+    <span transloco="general.lastupdatedAt"></span
+    ><span>{{ lastUpdatedAt | date: 'short':undefined:locale }}</span> (
+    <span transloco="impressum.days" [translocoParams]="{ days: days }"></span>)
+    <br />
+    <ng-container>{{ 'general.copyright' | transloco }}</ng-container>
+  </div>
+
+  <ul>
+    <li
+      transloco="impressum.developers"
+      [translocoParams]="{ gender: 'female', name: 'Sarah' }"
+    ></li>
+    <li
+      transloco="impressum.developers"
+      [translocoParams]="{ gender: 'male', name: 'Peter' }"
+    ></li>
+    <li>
+      {{
+        'impressum.developers' | transloco: { gender: 'male', name: 'Peter' }
+      }}
+    </li>
+    <li>
+      {{ 'impressum.developers' | transloco: { name: 'Sarah + Peter' } }}
+    </li>
+  </ul>
+</footer>

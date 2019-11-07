@@ -3,7 +3,7 @@
 $ ng generate directive shared/input-float/input-float --module shared --export
 $ ng generate component shared/input-float --module shared --export
 
-## shared/input-float/input-float.directive.ts
+## src/app/shared/input-float/input-float.directive.ts
 
 ```ts
 import { Directive } from '@angular/core';
@@ -23,7 +23,7 @@ export class InputFloatDirective {
 }
 ```
 
-## shared/input-float/input-float.component.ts
+## src/app/shared/input-float/input-float.component.ts
 
 ```ts
 import { Component, OnInit, forwardRef, Input } from '@angular/core';
@@ -31,7 +31,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { getFloat, cutToDecimal } from '../utils/utils';
 
 @Component({
-  selector: 'input-float',
+  selector: 'app-input-float',
   templateUrl: './input-float.component.html',
   styleUrls: ['./input-float.component.scss'],
   providers: [
@@ -138,7 +138,7 @@ export class InputFloatComponent implements OnInit, ControlValueAccessor {
 }
 ```
 
-## shared/input-float/input-float.component.html
+## src/app/shared/input-float/input-float.component.html
 
 ```html
 <mat-form-field>
@@ -151,7 +151,7 @@ export class InputFloatComponent implements OnInit, ControlValueAccessor {
     (ngModelChange)="parseToFloat($event)"
     placeholder="{{placeholder}}"
   />
-  <span matPrefix>$&nbsp;</span>
+  <span matPrefix>€&nbsp;</span>
 
   <mat-error *ngIf="field.invalid">
     Please enter a valid number
@@ -159,7 +159,7 @@ export class InputFloatComponent implements OnInit, ControlValueAccessor {
 </mat-form-field>
 ```
 
-## settings/settings.component.html
+## src/app/settings/settings.component.html
 
 ```html
 <div class="form-row">
@@ -171,7 +171,7 @@ export class InputFloatComponent implements OnInit, ControlValueAccessor {
 </div>
 ```
 
-## settings/settings.model.ts
+## src/app/settings/settings.model.ts
 
 ```ts
 salary: formBuilder.control(settings.salary),

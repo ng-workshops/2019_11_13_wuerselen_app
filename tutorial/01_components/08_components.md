@@ -45,7 +45,11 @@ export class InfoItemComponent implements OnInit {
 ## src/app/home/home.component.html
 
 ```html
+...
+
 <p>
   <app-info-item [(message)]="name"></app-info-item>
 </p>
+
+...
 ```

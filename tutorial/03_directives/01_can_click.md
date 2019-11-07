@@ -47,19 +47,6 @@ export class CanClickDirective implements OnInit {
 }
 ```
 
-## src/app/customers/customers.module.ts
-
-```ts
-@NgModule({
-  imports: [
-    ...
-    SharedModule,
-    ...
-  ],
-})
-export class CustomersModule {}
-```
-
 ## src/app/customers/customer/customer.component.html
 
 ```html

@@ -28,7 +28,7 @@ getRouteAnimation(outlet: RouterOutlet) {
 ```ts
 ...
 const routes = [
-  { path: '', component: HomeComponent, data: { animation: 'home' } }
+  { path: 'home', component: HomeComponent, data: { animation: 'home' } }
 ];
 ...
 ```

@@ -31,6 +31,7 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import { HostElementService } from './shared/modal/host/host-element.service';
+import { SettingsService } from './settings/settings.service';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +40,7 @@ import { HostElementService } from './shared/modal/host/host-element.service';
 })
 export class AppComponent implements OnInit {
   constructor(
+    private settingsService: SettingsService,
     hostElementService: HostElementService,
     hostElement: ViewContainerRef
   ) {

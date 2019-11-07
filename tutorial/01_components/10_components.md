@@ -2,7 +2,7 @@
 
 > ng generate component shared/modal --module shared
 
-> create shared/modal/modal.model.ts
+> touch src/app/shared/modal/modal.model.ts
 
 ## src/app/shared/modal/modal.model.ts
 

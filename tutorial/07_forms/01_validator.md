@@ -1,8 +1,9 @@
 # 1 forms - custom validator
 
-> create shared/input-float/input-float.validator.ts
+> mkdir src/app/shared/input-float
+> touch src/app/shared/input-float/input-float.validator.ts
 
-## shared/input-float/input-float.validator.ts
+## src/app/shared/input-float/input-float.validator.ts
 
 ```ts
 import { ValidatorFn, AbstractControl } from '@angular/forms';
@@ -25,13 +26,15 @@ export function floatValidator(): ValidatorFn {
 }
 ```
 
-## settings/settings.model.ts
+## src/app/settings/settings.model.ts
 
 ```ts
+import { floatValidator } from '../shared/input-float/input-float.validator';
+
 salary: formBuilder.control(settings.salary, floatValidator()),
 ```
 
-## settings/settings.component.html
+## src/app/settings/settings.component.html
 
 ```html
 <div class="form-row">
